@@ -1,27 +1,63 @@
 # TestDrivenDevelopment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+This repository features an Angular project demonstrating a ToDo list component built with test-driven development (TDD). The component is created using Ignite UI for Angular library.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Empty ToDo List:** The ToDo list is initially empty.
+- **Add ToDo Item:** Users can add new ToDo items to the list.
+- **Delete ToDo Item:** Users can delete ToDo items from the list.
+- **Mark ToDo Item as Complete:** Users can mark ToDo items as complete.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To get a local copy up and running follow these simple steps.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js
+- Angular CLI
+- Ignite UI for Angular library
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository
+   ```sh
+   git clone https://github.com/your_username/test-driven-development.git
+   ```
 
 ## Running end-to-end tests
+2. Navigate to the project directory
+   ```
+   cd test-driven-development
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Install dependencies
+   ```
+   npm install
+   ```
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Run the project
+   ```
+   ng serve
+   ```
+
+2. Open your browser and navigate to 
+   `http://localhost:4200/`
+
+
+Run unit tests using Angular CLI
+   ```
+   ng test
+   ```
+
+
+Contributions are welcome! Please fork the repository and open a pull request with your changes.
+
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+Georgi Anastasov - [LinkedIn](https://www.linkedin.com/in/georgianastasov/)
