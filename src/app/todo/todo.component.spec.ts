@@ -19,4 +19,8 @@ describe('TodoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should initialize with an empty todo list', () => {
+    expect(component.todoList).toEqual([]);
+  });
 });
