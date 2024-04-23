@@ -1,6 +1,10 @@
 <div class="todo-list">
   <h6>Todo List</h6>
   <form (ngSubmit)="addTodoItem(newItem)" #todoForm="ngForm">
+    <igx-input-group>
+      <input igxInput type="text" placeholder="Add new item" [(ngModel)]="newItem" name="newItem" required>
+    </igx-input-group>
+    <button igxButton="raised" type="submit">Add New Item</button>
   </form>
 
   <igx-list>

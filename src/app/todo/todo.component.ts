@@ -12,6 +12,7 @@ import { IgxButtonDirective, IgxButtonModule, IgxInputGroupModule, IgxListModule
 })
 export class TodoComponent {
   todoList: string[] = [];
+  newItem: string = '';
 
   constructor() { }
 
