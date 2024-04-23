@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoComponent } from './todo.component';
+import { By } from '@angular/platform-browser';
 
 describe('TodoComponent', () => {
   let component: TodoComponent;
@@ -28,5 +29,19 @@ describe('TodoComponent', () => {
     const newItem = 'New Task';
     component.addTodoItem(newItem);
     expect(component.todoList).toContain(newItem);
+  });
+
+  it('should bind input field with newItem property', () => {
+    const inputField = fixture.debugElement.query(
+      By.css('input')
+    ).nativeElement;
+    const newItem = 'New Task';
+
+    inputField.value = newItem;
+    inputField.dispatchEvent(new Event('input'));
+
+    fixture.detectChanges();
+
+    expect(component.newItem).toEqual(newItem);
   });
 });
