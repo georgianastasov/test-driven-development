@@ -23,4 +23,10 @@ describe('TodoComponent', () => {
   it('should initialize with an empty todo list', () => {
     expect(component.todoList).toEqual([]);
   });
+
+  it('should add a new ToDo item', () => {
+    const newItem = 'New Task';
+    component.addTodoItem(newItem);
+    expect(component.todoList).toContain(newItem);
+  });
 });
