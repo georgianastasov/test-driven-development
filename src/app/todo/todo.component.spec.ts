@@ -44,4 +44,16 @@ describe('TodoComponent', () => {
 
     expect(component.newItem).toEqual(newItem);
   });
+
+  it('should display correct index for each ToDo item', () => {
+    component.todoList = ['Task 1', 'Task 2', 'Task 3'];
+    fixture.detectChanges();
+
+    const listItems = fixture.debugElement.queryAll(By.css('igx-list-item'));
+
+    listItems.forEach((item, index) => {
+      const textContent = item.nativeElement.textContent.trim();
+      expect(textContent).toContain(`${index + 1} - Task ${index + 1}`);
+    });
+  });
 });
