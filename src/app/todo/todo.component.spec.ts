@@ -56,4 +56,11 @@ describe('TodoComponent', () => {
       expect(textContent).toContain(`${index + 1} - Task ${index + 1}`);
     });
   });
+
+  it('should clear newItem after adding a ToDo item', () => {
+    component.newItem = 'New Task';
+    component.addTodoItem(component.newItem);
+
+    expect(component.newItem).toEqual('');
+  });
 });
