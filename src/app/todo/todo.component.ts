@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IgxButtonDirective, IgxButtonModule, IgxInputGroupModule, IgxListModule } from 'igniteui-angular';
+import { IgxButtonDirective, IgxButtonModule, IgxIconModule, IgxInputGroupModule, IgxListModule } from 'igniteui-angular';
 
 @Component({
   selector: 'app-todo',
   standalone: true,
-  imports: [CommonModule, FormsModule, IgxListModule, IgxInputGroupModule, IgxButtonModule, IgxButtonDirective],
+  imports: [CommonModule, FormsModule, IgxListModule, IgxInputGroupModule, IgxButtonModule, IgxButtonDirective, IgxIconModule],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
 })
