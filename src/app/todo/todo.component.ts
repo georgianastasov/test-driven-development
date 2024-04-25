@@ -12,7 +12,7 @@ import { IgxButtonDirective, IgxButtonModule, IgxIconModule, IgxInputGroupModule
 })
 export class TodoComponent {
   todoList: string[] = [];
-  newItem: string = '';
+  item: string = '';
 
   constructor() { }
 
@@ -22,10 +22,14 @@ export class TodoComponent {
 
   addTodoItem(newItem: string): void {
     this.todoList.push(newItem);
-    this.newItem = '';
+    this.item = '';
   }
 
   deleteTodoItem(index: number): void {
     this.todoList.splice(index, 1);
+  }
+
+  selectTodoItem(index: number): void {
+    this.item = this.todoList[index];
   }
 }

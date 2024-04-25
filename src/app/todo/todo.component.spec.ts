@@ -42,7 +42,7 @@ describe('TodoComponent', () => {
 
     fixture.detectChanges();
 
-    expect(component.newItem).toEqual(newItem);
+    expect(component.item).toEqual(newItem);
   });
 
   it('should display correct index for each ToDo item', () => {
@@ -58,10 +58,10 @@ describe('TodoComponent', () => {
   });
 
   it('should clear newItem after adding a ToDo item', () => {
-    component.newItem = 'New Task';
-    component.addTodoItem(component.newItem);
+    component.item = 'New Task';
+    component.addTodoItem(component.item);
 
-    expect(component.newItem).toEqual('');
+    expect(component.item).toEqual('');
   });
 
   it('should delete a ToDo item', () => {
