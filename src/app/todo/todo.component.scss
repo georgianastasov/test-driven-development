@@ -33,4 +33,14 @@
       margin-left: 10px;
     }
   }
+
+  .delete-button{
+    border: none;
+    margin-left: auto;
+
+    igx-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
 }

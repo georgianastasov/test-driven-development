@@ -24,4 +24,8 @@ export class TodoComponent {
     this.todoList.push(newItem);
     this.newItem = '';
   }
+
+  deleteTodoItem(index: number): void {
+    this.todoList.splice(index, 1);
+  }
 }
