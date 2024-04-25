@@ -74,4 +74,17 @@ describe('TodoComponent', () => {
     expect(component.todoList.length).toEqual(2);
     expect(component.todoList).not.toContain('Task 1');
   });
+
+  it('should populate input field when item is selected', () => {
+    component.todoList = ['Task 1', 'Task 2', 'Task 3'];
+    fixture.detectChanges();
+    
+    const selectedItemIndex = 0;
+    const selectedItem = component.todoList[selectedItemIndex];
+
+    component.selectTodoItem(selectedItemIndex);
+    fixture.detectChanges();
+
+    expect(component.item).toEqual(selectedItem);
+  });
 });
