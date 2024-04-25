@@ -22,5 +22,6 @@ export class TodoComponent {
 
   addTodoItem(newItem: string): void {
     this.todoList.push(newItem);
+    this.newItem = '';
   }
 }
