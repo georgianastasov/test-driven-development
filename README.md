@@ -7,11 +7,12 @@ This repository features an Angular project demonstrating a ToDo list component 
 - **Empty ToDo List:** The ToDo list is initially empty.
 - **Add ToDo Item:** Users can add new ToDo items to the list.
 - **Delete ToDo Item:** Users can delete ToDo items from the list.
+- **Edit ToDo Item**: Users can edit existing ToDo items in the list.
 - **Mark ToDo Item as Complete:** Users can mark ToDo items as complete.
 
 ## Getting Started :rocket:
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these simple next steps.
 
 ## Prerequisites :gear:
 
