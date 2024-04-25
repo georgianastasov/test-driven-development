@@ -63,4 +63,15 @@ describe('TodoComponent', () => {
 
     expect(component.newItem).toEqual('');
   });
+
+  it('should delete a ToDo item', () => {
+    component.todoList = ['Task 1', 'Task 2', 'Task 3'];
+    fixture.detectChanges();
+
+    component.deleteTodoItem(0);
+    fixture.detectChanges();
+
+    expect(component.todoList.length).toEqual(2);
+    expect(component.todoList).not.toContain('Task 1');
+  });
 });
