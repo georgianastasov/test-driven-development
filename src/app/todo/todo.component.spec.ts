@@ -27,7 +27,11 @@ describe('TodoComponent', () => {
 
   it('should add a new ToDo item', () => {
     const newItem = 'New Task';
+    fixture.detectChanges();
+
     component.addTodoItem(newItem);
+    fixture.detectChanges();
+
     expect(component.todoList).toContain(newItem);
   });
 
@@ -36,10 +40,10 @@ describe('TodoComponent', () => {
       By.css('input')
     ).nativeElement;
     const newItem = 'New Task';
+    fixture.detectChanges();
 
     inputField.value = newItem;
     inputField.dispatchEvent(new Event('input'));
-
     fixture.detectChanges();
 
     expect(component.item).toEqual(newItem);
@@ -50,6 +54,7 @@ describe('TodoComponent', () => {
     fixture.detectChanges();
 
     const listItems = fixture.debugElement.queryAll(By.css('igx-list-item'));
+    fixture.detectChanges();
 
     listItems.forEach((item, index) => {
       const textContent = item.nativeElement.textContent.trim();
@@ -59,7 +64,10 @@ describe('TodoComponent', () => {
 
   it('should clear newItem after adding a ToDo item', () => {
     component.item = 'New Task';
+    fixture.detectChanges();
+
     component.addTodoItem(component.item);
+    fixture.detectChanges();
 
     expect(component.item).toEqual('');
   });
@@ -81,6 +89,7 @@ describe('TodoComponent', () => {
 
     const selectedItemIndex = 0;
     const selectedItem = component.todoList[selectedItemIndex];
+    fixture.detectChanges();
 
     component.selectTodoItem(selectedItemIndex);
     fixture.detectChanges();
@@ -95,6 +104,7 @@ describe('TodoComponent', () => {
 
     component.todoList = ['Task 1', 'Task 2', 'Task 3'];
     component.editIndex = editedItemIndex;
+    fixture.detectChanges();
 
     component.editTodoItem(editedValue);
     fixture.detectChanges();
