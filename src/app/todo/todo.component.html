@@ -1,16 +1,19 @@
 <div class="todo-list">
   <h6>Todo List</h6>
-  <form (ngSubmit)="addTodoItem(newItem)" #todoForm="ngForm">
+  <div class="editor">
     <igx-input-group>
       <input
         igxInput
         type="text"
         placeholder="Add new item"
+        [(ngModel)]="item"
+        name="item"
         required
       />
     </igx-input-group>
-    <button class="add-button" igxButton="raised" type="submit">Add New Item</button>
-  </form>
+    <button *ngIf="!editing" class="add-button" igxButton="raised" (click)="addTodoItem(item)">Add New Item</button>
+    <button *ngIf="editing" class="edit-button" igxButton="raised" (click)="editTodoItem(item)">Edit Item</button>
+  </div>
 
   <igx-list>
     <igx-list-item *ngFor="let item of todoList; index as i" (click)="selectTodoItem(i)"

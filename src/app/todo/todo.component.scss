@@ -14,9 +14,13 @@
     width: 100%;
     max-width: 400px;
     --ig-size: var(--ig-size-large);
+
+    igx-list-item {
+      cursor: pointer;
+    }
   }
 
-  form {
+  .editor {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,13 +32,13 @@
       --ig-size: var(--ig-size-small);
     }
 
-    .add-button {
+    .add-button, .edit-button {
       height: 38px;
       margin-left: 10px;
     }
   }
 
-  .delete-button{
+  .delete-button {
     border: none;
     margin-left: auto;
 
