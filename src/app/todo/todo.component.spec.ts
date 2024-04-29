@@ -101,4 +101,15 @@ describe('TodoComponent', () => {
 
     expect(component.todoList[editedItemIndex]).toEqual(editedValue);
   });
+
+  it('should set editing flag to true when "Edit Item" button is clicked', () => {
+    const itemIndex = 0;
+    component.editing = false;
+    fixture.detectChanges();
+
+    component.selectTodoItem(itemIndex);
+    fixture.detectChanges();
+
+    expect(component.editing).toBeTrue();
+  });
 });
