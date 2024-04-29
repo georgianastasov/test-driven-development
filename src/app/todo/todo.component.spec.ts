@@ -78,7 +78,7 @@ describe('TodoComponent', () => {
   it('should populate input field when item is selected', () => {
     component.todoList = ['Task 1', 'Task 2', 'Task 3'];
     fixture.detectChanges();
-    
+
     const selectedItemIndex = 0;
     const selectedItem = component.todoList[selectedItemIndex];
 
@@ -86,5 +86,19 @@ describe('TodoComponent', () => {
     fixture.detectChanges();
 
     expect(component.item).toEqual(selectedItem);
+  });
+
+  it('should update todo list when item is edited', () => {
+    const editedItemIndex = 0;
+    const editedValue = 'Edited Task';
+    fixture.detectChanges();
+
+    component.todoList = ['Task 1', 'Task 2', 'Task 3'];
+    component.editIndex = editedItemIndex;
+
+    component.editTodoItem(editedValue);
+    fixture.detectChanges();
+
+    expect(component.todoList[editedItemIndex]).toEqual(editedValue);
   });
 });
