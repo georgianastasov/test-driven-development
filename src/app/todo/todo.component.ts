@@ -13,6 +13,7 @@ import { IgxButtonDirective, IgxButtonModule, IgxIconModule, IgxInputGroupModule
 export class TodoComponent {
   todoList: string[] = [];
   item: string = '';
+  editing: boolean = false;
   editIndex: number = 0;
 
   constructor() { }
@@ -31,6 +32,7 @@ export class TodoComponent {
   }
 
   selectTodoItem(index: number): void {
+    this.editing = true;
     this.item = this.todoList[index];
     this.editIndex = index;
   }
@@ -38,5 +40,6 @@ export class TodoComponent {
   editTodoItem(editedValue: string): void {
     this.todoList[this.editIndex] = editedValue;
     this.item = '';
+    this.editing = false;
   }
 }
