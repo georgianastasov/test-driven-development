@@ -10,6 +10,7 @@ This repository features an Angular project demonstrating a ToDo list component 
 - **Edit ToDo Item**: Users can edit existing ToDo items in the list.
 - **Mark ToDo Item as Complete:** Users can mark ToDo items as complete.
 - **Filter ToDo Items:** Users can filter ToDo items based on their status (e.g., completed, active).
+- **Reorder ToDo Items:** Users can reorder ToDo items by dragging and dropping them.
 
 ## Getting Started :rocket:
 
