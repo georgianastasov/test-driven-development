@@ -1,0 +1,26 @@
+<div class="todo-list">
+  <h6>Todo List</h6>
+  <div class="editor">
+    <igx-input-group>
+      <input
+        igxInput
+        type="text"
+        placeholder="Add new item"
+        [(ngModel)]="item"
+        name="item"
+        required
+      />
+    </igx-input-group>
+    <button *ngIf="!editing" class="add-button" igxButton="raised" (click)="addTodoItem(item)">Add New Item</button>
+    <button *ngIf="editing" class="edit-button" igxButton="raised" (click)="editTodoItem(item)">Edit Item</button>
+  </div>
+
+  <igx-list>
+    <igx-list-item *ngFor="let item of todoList; index as i" (click)="selectTodoItem(i)"
+      >{{ i + 1 }} - {{ item }}
+      <button class="delete-button" (click)="deleteTodoItem(i)">
+        <igx-icon>delete</igx-icon>
+      </button>
+    </igx-list-item>
+  </igx-list>
+</div>
